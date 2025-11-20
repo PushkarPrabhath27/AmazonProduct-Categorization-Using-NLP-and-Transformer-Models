@@ -1,0 +1,2 @@
+model,accuracy,macro_precision,macro_recall,macro_f1,micro_f1
+DistilBERT,0.9236,0.8018377442256984,0.7498036924120227,0.7571567416918802,0.9236

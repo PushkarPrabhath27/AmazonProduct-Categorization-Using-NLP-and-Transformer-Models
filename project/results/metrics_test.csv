@@ -1,0 +1,2 @@
+model,accuracy,macro_precision,macro_recall,macro_f1,micro_f1,top_2_accuracy,top_3_accuracy,top_5_accuracy
+Best Baseline (LR),0.9692,0.9716363045457999,0.9583967580680013,0.9647151891639716,0.9692,0.9896,0.9945,0.9977

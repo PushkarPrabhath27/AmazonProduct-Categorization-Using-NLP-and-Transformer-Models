@@ -57,7 +57,7 @@ inputs/
 ################################################################################
 
 # HuggingFace saved models
-results/
+# HuggingFace saved models
 checkpoint/
 checkpoints/
 runs/
@@ -85,7 +85,6 @@ bert_embeddings*.joblib
 *.pkl
 *.model
 *.weights
-*.json
 
 # TensorBoard logs
 logs/
@@ -155,7 +154,6 @@ Desktop.ini
 *.json.secret
 secrets/
 credentials/
-config/
 *.pem
 
 ################################################################################
@@ -176,3 +174,15 @@ site/
 draft_*.ipynb
 test_*.ipynb
 old_*.ipynb
+
+################################################################################
+# DOCUMENTATION - EXPLICITLY ALLOWED
+################################################################################
+!*.md
+!REPORT/
+!docs/
+!*.pdf
+!*.png
+!*.jpg
+!*.jpeg
+!*.csv

@@ -1,0 +1,4 @@
+﻿model,accuracy,macro_precision,macro_recall,macro_f1
+LogisticRegression,0.9649,0.9589,0.9564,0.9569
+RandomForest,0.8937,0.8838,0.8791,0.8813
+MultinomialNB,0.8816,0.8714,0.8666,0.8689

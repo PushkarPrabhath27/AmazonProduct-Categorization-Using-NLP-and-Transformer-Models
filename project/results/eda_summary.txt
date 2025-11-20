@@ -1,0 +1,39 @@
+Head:
+                                                                                                                                   product_title  product_description   category
+0                                                                          Sion Softside Expandable Roller Luggage, Black, Checked-Large 29-Inch                  NaN  Suitcases
+1                                                                    Luggage Sets Expandable PC+ABS Durable Suitcase Double Wheels TSA Lock Blue                  NaN  Suitcases
+2  Platinum Elite Softside Expandable Checked Luggage, 8 Wheel Spinner Suitcase, TSA Lock, Men and Women, True Navy Blue, Checked Medium 25-Inch                  NaN  Suitcases
+3                                                             Freeform Hardside Expandable with Double Spinner Wheels, Navy, 2-Piece Set (21/28)                  NaN  Suitcases
+4                                                   Winfield 2 Hardside Expandable Luggage with Spinner Wheels, Checked-Large 28-Inch, Deep Blue                  NaN  Suitcases
+
+Shape: (100000, 3)
+
+Dtypes:
+product_title           object
+product_description    float64
+category                object
+
+Missing values:
+product_title               0
+product_description    100000
+category                    0
+
+Unique categories: 15
+
+Top 20 categories:
+category
+Girls' Clothing                                   17599
+Men's Shoes                                       17092
+Men's Clothing                                    17070
+Men's Accessories                                  8449
+Headphones & Earbuds                               8399
+Televisions & Video Products                       6904
+PlayStation 4 Games, Consoles & Accessories        6188
+Boys' Clothing                                     6011
+Vacuum Cleaners & Floor Care                       3787
+Xbox 360 Games, Consoles & Accessories             3433
+Additive Manufacturing Products                    2091
+Wii U Games, Consoles & Accessories                 968
+Suitcases                                           924
+PlayStation Vita Games, Consoles & Accessories      593
+Boys' Watches                                       492
