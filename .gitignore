@@ -50,30 +50,7 @@ inputs/
 *.tar.gz
 *.7z
 
-# Intermediate generated files
-processed_data/
-output_data/
-cleaned_data/
-tmp/
-temp/
-cache/
-tmp_*/
 
-################################################################################
-# JUPYTER / COLAB NOTEBOOK STUFF
-################################################################################
-.ipynb_checkpoints/
-*.ipynb_checkpoints
-*.ipynb_tmp
-*.nbconvert/
-*.nb.html
-*.ipy
-.jupyter/
-.profile
-
-# Colab config
-*.colab
-.colab/
 
 ################################################################################
 # MODEL ARTIFACTS / CHECKPOINTS
@@ -115,15 +92,7 @@ logs/
 tensorboard/
 event*.*
 
-################################################################################
-# TENSORFLOW SPECIFIC
-################################################################################
-.tf_config/
-tf_logs/
-tensorflow_logs/
-train_logs/
-saved_model/
-saved_model.pb
+
 
 ################################################################################
 # PYTORCH SPECIFIC
@@ -200,17 +169,6 @@ site/
 .eggs/
 
 ################################################################################
-# NOTEBOOK EXPORTS / REPORTS
-################################################################################
-*.pdf
-*.docx
-*.pptx
-exports/
-reports/
-report*/
-documentation/
-
-################################################################################
 # PROJECT-SPECIFIC SAFE IGNORE
 ################################################################################
 
@@ -218,13 +176,3 @@ documentation/
 draft_*.ipynb
 test_*.ipynb
 old_*.ipynb
-
-# Auto-saved outputs from your workflow
-model_outputs/
-training_artifacts/
-plots/
-figures/
-*.png
-*.svg
-*.jpg
-*.jpeg
