@@ -1,0 +1,230 @@
+################################################################################
+# GENERAL PYTHON
+################################################################################
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+*.pickle
+*.pyd
+*.so
+
+# Byte-compiled / optimized / DLL files
+*.dll
+*.dylib
+*.exe
+
+# Python cache
+*.pyc
+*.pyd
+*.pyo
+*.$py.class
+
+################################################################################
+# VIRTUAL ENVIRONMENTS
+################################################################################
+venv/
+env/
+.venv/
+.env/
+ENV/
+pip-wheel-metadata/
+pip-download-cache/
+
+################################################################################
+# DATA FILES (DO NOT COMMIT HUGE CSVs)
+################################################################################
+# Amazon datasets uploaded manually
+amazon_products.csv
+amazon_categories.csv
+amazon_products*.csv
+datasets/
+data/
+raw_data/
+input/
+inputs/
+*.zip
+*.gz
+*.tar
+*.tar.gz
+*.7z
+
+# Intermediate generated files
+processed_data/
+output_data/
+cleaned_data/
+tmp/
+temp/
+cache/
+tmp_*/
+
+################################################################################
+# JUPYTER / COLAB NOTEBOOK STUFF
+################################################################################
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+*.ipynb_tmp
+*.nbconvert/
+*.nb.html
+*.ipy
+.jupyter/
+.profile
+
+# Colab config
+*.colab
+.colab/
+
+################################################################################
+# MODEL ARTIFACTS / CHECKPOINTS
+################################################################################
+
+# HuggingFace saved models
+results/
+checkpoint/
+checkpoints/
+runs/
+saved_models/
+hf_models/
+models/
+*/pytorch_model.bin
+*/tf_model.h5
+*.bin
+*.h5
+*.hdf5
+*.pt
+*.pth
+*.tflite
+*.ckpt
+*.ckpt.data-00000-of-00001
+*.index
+*.onnx
+
+# Model outputs from your notebooks
+best_classical_model*.joblib
+lstm_model*.joblib
+bert_embeddings*.joblib
+*.joblib
+*.pkl
+*.model
+*.weights
+*.json
+
+# TensorBoard logs
+logs/
+tensorboard/
+event*.*
+
+################################################################################
+# TENSORFLOW SPECIFIC
+################################################################################
+.tf_config/
+tf_logs/
+tensorflow_logs/
+train_logs/
+saved_model/
+saved_model.pb
+
+################################################################################
+# PYTORCH SPECIFIC
+################################################################################
+lightning_logs/
+*.pth.tar
+*.pt
+*.pth
+*.ckpt
+wandb/
+wandb/*
+
+################################################################################
+# HUGGINGFACE & TRANSFORMERS CACHE
+################################################################################
+~/.cache/huggingface/
+huggingface/
+.cache/
+transformers_cache/
+datasets_cache/
+tokenizers_cache/
+tokenizer.json
+
+################################################################################
+# VS CODE
+################################################################################
+.vscode/
+*.code-workspace
+
+# Python debugging files
+*.coverage
+.coverage
+htmlcov/
+coverage.xml
+pytest_cache/
+.cache/
+
+################################################################################
+# LOGS & SYSTEM
+################################################################################
+*.log
+*.out
+logs/
+debug.log
+nohup.out
+
+# OS files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+################################################################################
+# ENVIRONMENT & SECRETS
+################################################################################
+.env
+.env.*
+*.secret
+*.key
+*.json.secret
+secrets/
+credentials/
+config/
+*.pem
+
+################################################################################
+# BUILD + DIST
+################################################################################
+build/
+dist/
+site/
+*.egg-info/
+*.egg
+.eggs/
+
+################################################################################
+# NOTEBOOK EXPORTS / REPORTS
+################################################################################
+*.pdf
+*.docx
+*.pptx
+exports/
+reports/
+report*/
+documentation/
+
+################################################################################
+# PROJECT-SPECIFIC SAFE IGNORE
+################################################################################
+
+# Any temporary analysis notebook
+draft_*.ipynb
+test_*.ipynb
+old_*.ipynb
+
+# Auto-saved outputs from your workflow
+model_outputs/
+training_artifacts/
+plots/
+figures/
+*.png
+*.svg
+*.jpg
+*.jpeg

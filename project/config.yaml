@@ -1,0 +1,83 @@
+# Project Configuration
+
+# Random seed for reproducibility
+random_seed: 42
+
+# Data paths
+data:
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+  train_file: "train.csv"
+  val_file: "val.csv"
+  test_file: "test.csv"
+
+# Data splitting
+split:
+  train_ratio: 0.8
+  val_ratio: 0.1
+  test_ratio: 0.1
+  stratify: true
+
+# Preprocessing
+preprocessing:
+  lowercase: true
+  remove_html: true
+  remove_punctuation: true
+  remove_numbers: false
+  normalize_whitespace: true
+
+# Feature Engineering
+features:
+  tfidf:
+    max_features: 50000
+    ngram_range: [1, 2]
+    min_df: 2
+  bert:
+    model_name: "distilbert-base-uncased"
+    max_length: 128
+
+# Model Training
+training:
+  baseline:
+    logistic_regression:
+      C_values: [0.01, 0.1, 1, 10]
+      max_iter: 1000
+      cv_folds: 5
+    random_forest:
+      n_estimators: [100]
+      max_depth: [20, 50]
+      cv_folds: 3
+    naive_bayes:
+      alpha: 1.0
+  
+  bert:
+    model_name: "distilbert-base-uncased"
+    num_epochs: 3
+    batch_size: 16
+    learning_rate: 3e-5
+    weight_decay: 0.01
+    warmup_ratio: 0.1
+    max_length: 128
+    gradient_accumulation_steps: 1
+
+# Evaluation
+evaluation:
+  metrics:
+    - accuracy
+    - precision
+    - recall
+    - f1_score
+  top_k: [2, 3, 5]
+
+# Paths
+paths:
+  models: "models"
+  results: "results"
+  logs: "experiments/logs"
+  notebooks: "notebooks"
+  report: "REPORT"
+
+# Compute
+compute:
+  device: "auto"  # auto, cpu, cuda
+  num_workers: 4
