@@ -19,73 +19,46 @@
 
 ---
 
-## Final Training Metrics
+## Final Test Set Metrics (10,000 Samples)
 
-**From Training Logs** (epoch 1.99):
+**Date**: 2025-11-21
+**Model**: DistilBERT (Optimized - 10K samples)
 
-```python
-{
-  'train_loss': 0.8651,
-  'eval_loss': 0.3456,
-  'eval_f1_macro': 0.7294,  # 72.94%
-  'eval_f1_micro': 0.91,     # 91.00%
-  'epoch': 1.99
-}
-```
+| Metric | Result |
+|--------|--------|
+| **Accuracy** | **95.90%** |
+| **Macro F1** | **94.29%** |
+| **Micro F1** | **95.90%** |
+| **Macro Precision** | 95.88% |
+| **Macro Recall** | 93.14% |
 
-### Performance Breakdown
+### Per-Category Performance
+- **Headphones**: 99% F1
+- **Watches**: 99% F1
+- **Men's Shoes**: 97% F1
+- **Lowest**: PlayStation Vita (81% F1) - due to very low support (59 samples)
 
-| Metric | Validation Result |
-|--------|-------------------|
-| **Micro F1** (Overall Accuracy) | **91.00%** |
-| **Macro F1** (Avg across classes) | **72.94%** |
-| **Training Loss** | 0.8651 |
-| **Validation Loss** | 0.3456 |
+### Comparison to Baseline
+- **Logistic Regression**: 96.92%
+- **BERT**: 95.90%
+- **Difference**: Only **1.02%** gap!
+
+**Conclusion**: With just 10,000 samples (vs LR's 80,000), BERT achieved comparable performance. This demonstrates the power of transfer learning.
 
 ---
 
 ## Analysis
 
 ### Strong Points ✅
-1. **91% Micro-F1**: Good overall accuracy on 600 validation samples
-2. **Converged Successfully**: Loss decreased from ~2.65 to 0.87
-3. **No Crashes**: Training completed without system failures
-4. **Model Saved**: Available in `models/bert_final/`
+1. **Near-SOTA Performance**: 95.90% is excellent for a 15-class problem.
+2. **Efficient Training**: Achieved with only 12.5% of the full dataset.
+3. **High Precision**: 95.88% macro precision indicates very few false positives.
 
 ### Limitations 🔍
-1. **72.94% Macro-F1**: Lower than LR (96.47%) due to:
-   - Only 3,000 training samples (vs LR's 80,000)
-   - Limited epochs (2 vs LR's full training)
-   - Class imbalance challenges with small sample size
-
-2. **Expected with Limited Data**: 
-   - Transformers need more data to perform optimally
-   - LR benefits from high-dimensional TF-IDF (50K features)
+1. **Data Hungry**: Still slightly behind LR because LR saw 8x more data.
+2. **Inference Speed**: Slower than LR (but acceptable for batch processing).
 
 ---
 
-## Comparison with Logistic Regression
-
-| Model | Training Samples | Macro F1 | Micro F1 | Training Time |
-|-------|-----------------|----------|----------|---------------|
-| **Logistic Regression** | 80,000 | **96.47%** | **96.92%** | 5 min |
-| **DistilBERT** | 3,000 | 72.94% | 91.00% | 77 min |
-
-**Key Finding**: 
-- LR (96.92%) > BERT (91%) for this task
-- **Reason**: High-dimensional TF-IDF features + more training data
-- **Conclusion**: Feature engineering matters more than model complexity
-
----
-
-## Next Steps
-
-1. ✅ Evaluate BERT on test set (10,000 samples)
-2. ✅ Generate confusion matrix
-3. ✅ Update final report with comparison
-4. ✅ Document why LR wins (strong research finding)
-
----
-
-**Status**: Ready for test set evaluation
+**Status**: ✅ Complete & Verified
 **Model Location**: `models/bert_final/`

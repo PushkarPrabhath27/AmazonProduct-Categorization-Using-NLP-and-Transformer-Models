@@ -37,7 +37,7 @@ print(f"Test set: {len(test_df)} samples")
 
 # Tokenize
 def tokenize_function(examples):
-    return tokenizer(examples["text"], padding="max_length", truncation=True, max_length=64)
+    return tokenizer(examples["text"], padding="max_length", truncation=True, max_length=128)
 
 test_dataset = Dataset.from_pandas(test_df[["text"]])
 test_dataset = test_dataset.map(tokenize_function, batched=True)
